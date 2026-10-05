@@ -58,7 +58,7 @@ export default function Sidebar({ view, setView, escalatedCount, totalCount }) {
           icon={<><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></>}
           label="Documentation"
           active={false}
-          onClick={() => window.open('https://github.com', '_blank')}
+          onClick={() => window.open('https://github.com/yash0260/SwasthiQQ/blob/main/README.md', '_blank')}
         />
         <NavItem
           icon={<><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></>}

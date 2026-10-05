@@ -112,12 +112,12 @@ export default function App() {
                 </div>
                 <div style={{ padding: 20 }}>
                   <p style={{ fontSize: 13, color: 'var(--slate)' }}>
-                    Visit <a href="http://localhost:8000/health" target="_blank" rel="noreferrer"
-                    style={{ color: 'var(--teal-800)' }}>http://localhost:8000/health</a> to check the backend.
+                    Visit <a href="https://swasthiqq.onrender.com/health" target="_blank" rel="noreferrer"
+                    style={{ color: 'var(--teal-800)' }}>https://swasthiqq.onrender.com/health</a> to check the backend.
                   </p>
                   <p style={{ fontSize: 13, color: 'var(--slate)', marginTop: 8 }}>
-                    API docs: <a href="http://localhost:8000/docs" target="_blank" rel="noreferrer"
-                    style={{ color: 'var(--teal-800)' }}>http://localhost:8000/docs</a>
+                    API docs: <a href="https://swasthiqq.onrender.com/docs" target="_blank" rel="noreferrer"
+                    style={{ color: 'var(--teal-800)' }}>https://swasthiqq.onrender.com/docs</a>
                   </p>
                 </div>
               </div>
