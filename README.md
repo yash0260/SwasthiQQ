@@ -9,7 +9,7 @@ A Python REST API + React frontend implementing a safe, deterministic clinic app
 ```bash
 cd backend
 cp .env.example .env
-# Edit .env and set OPENAI_API_KEY
+# Edit .env and set GEMINI_API_KEY
 pip install -r requirements.txt
 uvicorn main:app --reload --port 8000
 ```
@@ -127,7 +127,7 @@ ap["status"] = "booked"
 ## Model
 
 - Default: `gpt-4o-mini` (fast, cheap, sufficient for structured tool-calling)
-- Override: set `OPENAI_MODEL=gpt-4o` in `.env` for better accuracy
+- Override: set `GEMINI_MODEL=gemini-1.5-pro` in `.env` for better accuracy
 
 ---
 

@@ -73,15 +73,15 @@
 
 ## 9. Determinism approach
 
-**Decision**: `temperature=0, seed=42` for all OpenAI calls. The pre-scan for clinical urgency is pure Python (fully deterministic). Tool dispatch is deterministic. The only non-deterministic element is LLM output under temperature > 0, which is removed.
+**Decision**: `temperature=0, seed=42` for all Gemini calls (if supported by model). The pre-scan for clinical urgency is pure Python (fully deterministic). Tool dispatch is deterministic. The only non-deterministic element is LLM output under temperature > 0, which is removed.
 
-**Known gap**: OpenAI does not guarantee identical outputs even with seed+temperature=0 across model updates. The runner's fingerprint check (`terminal_state/escalation_reason/tool_names`) is more stable than exact wording, which is by design.
+**Known gap**: Gemini does not guarantee identical outputs even with seed+temperature=0 across model updates. The runner's fingerprint check (`terminal_state/escalation_reason/tool_names`) is more stable than exact wording, which is by design.
 
 ---
 
-## 10. Model choice: gpt-4o-mini
+## 10. Model choice: gemini-1.5-flash
 
-**Rationale**: Sufficient for structured tool-calling, much cheaper than gpt-4o, fast enough for the evaluation harness (sub-3s per conversation). The tool schemas are explicit enough that the smaller model reliably selects the right tool. Set `OPENAI_MODEL=gpt-4o` in `.env` for harder edge cases.
+**Rationale**: Sufficient for structured tool-calling, much cheaper than gemini-1.5-pro, fast enough for the evaluation harness (sub-3s per conversation). The tool schemas are explicit enough that the smaller model reliably selects the right tool. Set `GEMINI_MODEL=gemini-1.5-pro` in `.env` for harder edge cases.
 
 ---
 

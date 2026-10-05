@@ -319,7 +319,7 @@ def run_agent(
     today: str,
     turns: list[str],
     openai_client: OpenAI,
-    model: str = "gpt-4o-mini",
+    model: str = "gemini-1.5-flash",
 ) -> AgentResult:
     t_start = time.monotonic()
     result = AgentResult()

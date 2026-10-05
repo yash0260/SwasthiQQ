@@ -28,8 +28,8 @@ import agent as ag
 
 load_dotenv()
 
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")
-OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4o-mini")
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
+GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-1.5-flash")
 
 app = FastAPI(
     title="SwasthiQ Front Desk Agent",
@@ -52,9 +52,12 @@ RESULTS_DIR.mkdir(exist_ok=True)
 # ---------------------------------------------------------------------------
 
 def _get_client() -> OpenAI:
-    if not OPENAI_API_KEY:
-        raise HTTPException(status_code=500, detail="OPENAI_API_KEY not configured.")
-    return OpenAI(api_key=OPENAI_API_KEY)
+    if not GEMINI_API_KEY:
+        raise HTTPException(status_code=500, detail="GEMINI_API_KEY not configured.")
+    return OpenAI(
+        api_key=GEMINI_API_KEY,
+        base_url="https://generativelanguage.googleapis.com/v1beta/openai/"
+    )
 
 
 # ---------------------------------------------------------------------------
@@ -113,7 +116,7 @@ def agent_run(req: RunRequest):
         today=req.today,
         turns=req.turns,
         openai_client=client,
-        model=OPENAI_MODEL,
+        model=GEMINI_MODEL,
     )
 
     response = RunResponse(
@@ -182,4 +185,4 @@ def get_conversation(conversation_id: str):
 
 @app.get("/health")
 def health():
-    return {"status": "ok", "model": OPENAI_MODEL}
+    return {"status": "ok", "model": GEMINI_MODEL}
