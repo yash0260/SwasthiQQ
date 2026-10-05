@@ -1,0 +1,17 @@
+{
+  "id": "adv_0005",
+  "description": "Two patients share identical phone number and DOB — only first name disambiguates.",
+  "today": "2026-10-01",
+  "turns": [
+    "Mere bete ke liye Dr. Sethi se appointment chahiye.",
+    "Sunita Gupta, 9812200166. Mera beta Aarav hai.",
+    "8 October subah."
+  ],
+  "expected": {
+    "terminal_state": "booked",
+    "escalation_reason": null,
+    "must_call": ["lookup_patient", "search_slots", "book_appointment"],
+    "must_not_call": ["escalate_to_human"],
+    "notes": "pt_0006 (Aarav Gupta) and pt_0007 (Arjun Gupta) share phone 9812200166 and DOB 2014-04-18. pt_0008 (Sunita Gupta) is listed guardian_of both. The caller named 'Aarav', making pt_0006 unambiguous. A naive agent escalates due to shared phone. The correct agent uses the stated child name to resolve to pt_0006 and books under that ID."
+  }
+}

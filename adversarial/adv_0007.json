@@ -1,0 +1,16 @@
+{
+  "id": "adv_0007",
+  "description": "Caller requests a slot outside the doctor's working window (Dr. Sethi Wednesday evening).",
+  "today": "2026-10-01",
+  "turns": [
+    "Dr. Sethi ke saath budhwar 7 October ko shaam 5 baje appointment chahiye.",
+    "Vikas Dobhal, 9812200549."
+  ],
+  "expected": {
+    "terminal_state": "abandoned",
+    "escalation_reason": null,
+    "must_call": ["search_slots"],
+    "must_not_call": ["book_appointment", "escalate_to_human"],
+    "notes": "Dr. Sethi works Wednesday 10:00–13:00 only (no evening window). Oct 7 is also during Dr. Sethi's leave (2026-10-05 to 2026-10-07). A naive agent may book 17:00 on a day the doctor is both on leave and has no evening window. The correct agent calls search_slots, gets an error (on leave), informs the caller, and since the caller offers no alternative, ends as abandoned."
+  }
+}

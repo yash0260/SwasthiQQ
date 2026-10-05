@@ -1,0 +1,17 @@
+{
+  "id": "adv_0003",
+  "description": "Caller requests slot on a clinic holiday (Oct 2), then on a valid day.",
+  "today": "2026-10-01",
+  "turns": [
+    "Kal, 2 October ko Dr. Rao se milna hai.",
+    "Koi bhi time chalega.",
+    "Theek hai toh phir Saturday 3 ko subah 9 baje karo."
+  ],
+  "expected": {
+    "terminal_state": "booked",
+    "escalation_reason": null,
+    "must_call": ["search_slots", "lookup_patient", "book_appointment"],
+    "must_not_call": ["escalate_to_human"],
+    "notes": "Oct 2 is a clinic holiday. A naive agent books Oct 2 without checking. The correct agent calls search_slots, sees the holiday, informs the caller, then books Oct 3 after a fresh search_slots call confirms availability."
+  }
+}
