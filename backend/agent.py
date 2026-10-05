@@ -377,7 +377,6 @@ def run_agent(
                 tools=TOOLS,
                 tool_choice="auto",
                 temperature=0,
-                seed=42,
                 max_tokens=1024,
             )
         except Exception as e:
