@@ -126,8 +126,7 @@ ap["status"] = "booked"
 
 ## Model
 
-- Default: `gpt-4o-mini` (fast, cheap, sufficient for structured tool-calling)
-- Override: set `GEMINI_MODEL=gemini-1.5-pro` in `.env` for better accuracy
+- Default: `gemini-3.1 Flast Lite` (fast, cheap, sufficient for structured tool-calling)
 
 ---
 
