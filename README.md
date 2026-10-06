@@ -7,7 +7,7 @@ A Python REST API + React frontend implementing a safe, deterministic clinic app
 | | Link |
 |--|------|
 | **3-Minute Video** | 🔗 [Watch on Google Drive](https://drive.google.com/file/d/1n5E68-uihaPhpQdI5xg-cNInVdjP68J4/view?usp=sharing) |
-| **Live Frontend** | 🔗 [swasthi-5uezq2wpl-yashs-projects-dbca437d.vercel.app](https://swasthi-5uezq2wpl-yashs-projects-dbca437d.vercel.app) |
+| **Live Frontend** | 🔗 [swasthi-qq.vercel.app](https://swasthi-qq.vercel.app) |
 | **Live Backend / API Docs** | 🔗 [swasthiqq.onrender.com/docs](https://swasthiqq.onrender.com/docs) |
 | **AI Transcript** | 🔗 [AI_TRANSCRIPT.txt](./AI_TRANSCRIPT.txt) |
 
