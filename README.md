@@ -2,6 +2,17 @@
 
 A Python REST API + React frontend implementing a safe, deterministic clinic appointment booking agent.
 
+## 🎬 Submission Links
+
+| | Link |
+|--|------|
+| **3-Minute Video** | 🔗 [Watch on Google Drive](https://drive.google.com/file/d/1n5E68-uihaPhpQdI5xg-cNInVdjP68J4/view?usp=sharing) |
+| **Live Frontend** | 🔗 [swasthiqq.vercel.app](https://swasthiqq.vercel.app) |
+| **Live Backend / API Docs** | 🔗 [swasthiqq.onrender.com/docs](https://swasthiqq.onrender.com/docs) |
+| **AI Transcript** | 🔗 [AI_TRANSCRIPT.txt](./AI_TRANSCRIPT.txt) |
+
+
+
 ## Quick Start
 
 ### Backend
