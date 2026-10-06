@@ -79,9 +79,9 @@
 
 ---
 
-## 10. Model choice: gemini-1.5-flash
+## 10. Model choice: gemini-3.1-flash-lite
 
-**Rationale**: Sufficient for structured tool-calling, much cheaper than gemini-1.5-pro, fast enough for the evaluation harness (sub-3s per conversation). The tool schemas are explicit enough that the smaller model reliably selects the right tool. Set `GEMINI_MODEL=gemini-1.5-pro` in `.env` for harder edge cases.
+**Rationale**: Sufficient for structured tool-calling, much cheaper than gemini-3.1-flash-lite, fast enough for the evaluation harness (sub-3s per conversation). The tool schemas are explicit enough that the smaller model reliably selects the right tool. Set `GEMINI_MODEL=gemini-3.1-flash-lite` in `.env` for harder edge cases.
 
 ---
 
